@@ -11,7 +11,7 @@ use_chatgpt_api = os.getenv("use_chatgpt_api", True)
 allowed_telegram_usernames = os.getenv("allowed_telegram_usernames")
 new_dialog_timeout = os.getenv("new_dialog_timeout")
 enable_message_streaming = os.getenv("enable_message_streaming", True)
-mongodb_uri = f"mongodb://mongo:{os.getenv('MONGODB_PORT')}"
+mongodb_uri = os.getenv('MONGODB_URI')
 
 # chat_modes
 with open(config_dir / "chat_modes.yml", 'r') as f:
